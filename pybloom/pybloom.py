@@ -284,6 +284,9 @@ have equal capacity and error rate")
         self.__dict__.update(d)
         self.make_hashes = make_hashfuncs(self.num_slices, self.bits_per_slice)
 
+    def getBitarray(self):
+        return self.bitarray
+
 class ScalableBloomFilter(object):
     SMALL_SET_GROWTH = 2 # slower, but takes up less memory
     LARGE_SET_GROWTH = 4 # faster, but takes up more memory faster
